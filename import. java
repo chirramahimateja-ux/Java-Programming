@@ -1,0 +1,13 @@
+import java.util.*;
+
+class Anagram {
+ public static void main(Strings,args[])
+{
+ s1="Listen";
+ s2="Silent";
+System.out.println(isAnagram(s1,s2) ?"Anagram" : "Not Anagram");
+}
+
+boolean 
+
+
