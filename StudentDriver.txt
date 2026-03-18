@@ -1,0 +1,17 @@
+import java.util.*;
+
+class StudentDriver
+{
+      public static void main(String args[])
+      {
+           ArrayList<Studentinfo> li = new ArrayList<>();
+
+           li.add(new Studentinfo(1,"Anjali"));
+           li.add(new Studentinfo(3,"Mahi"));
+           li.add(new Studentinfo(2,"Deepu"));
+
+           Collections.sort(li, new NameComparator());
+
+           System.out.println(li);
+      }
+}
