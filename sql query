@@ -1,0 +1,45 @@
+CREATE DATABASE IF NOT EXISTS leave_db;
+USE leave_db;
+
+DROP TABLE IF EXISTS leave_records;
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE,
+    credit_points INT DEFAULT 0
+);
+
+CREATE TABLE leave_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    taken INT NOT NULL,
+    requested INT NOT NULL,
+    status VARCHAR(20),
+    impact VARCHAR(20),
+    applied_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO employees(name, credit_points) VALUES
+('Employee1',1), ('Employee2',3), ('Employee3',2), ('Employee4',0), ('Employee5',4),
+('Employee6',1), ('Employee7',5), ('Employee8',2), ('Employee9',0), ('Employee10',3),
+('Employee11',2), ('Employee12',4), ('Employee13',1), ('Employee14',0), ('Employee15',5),
+('Employee16',3), ('Employee17',2), ('Employee18',1), ('Employee19',4), ('Employee20',0),
+('Employee21',5), ('Employee22',2), ('Employee23',3), ('Employee24',1), ('Employee25',0),
+('Employee26',4), ('Employee27',2), ('Employee28',5), ('Employee29',1), ('Employee30',3),
+('Employee31',0), ('Employee32',4), ('Employee33',2), ('Employee34',1), ('Employee35',5),
+('Employee36',3), ('Employee37',0), ('Employee38',2), ('Employee39',4), ('Employee40',1),
+('Employee41',5), ('Employee42',3), ('Employee43',2), ('Employee44',0), ('Employee45',4),
+('Employee46',1), ('Employee47',5), ('Employee48',3), ('Employee49',2), ('Employee50',0),
+('Employee51',4), ('Employee52',1), ('Employee53',3), ('Employee54',2), ('Employee55',5),
+('Employee56',0), ('Employee57',4), ('Employee58',1), ('Employee59',2), ('Employee60',3),
+('Employee61',5), ('Employee62',0), ('Employee63',4), ('Employee64',2), ('Employee65',1),
+('Employee66',3), ('Employee67',5), ('Employee68',0), ('Employee69',2), ('Employee70',4),
+('Employee71',1), ('Employee72',3), ('Employee73',5), ('Employee74',2), ('Employee75',0),
+('Employee76',4), ('Employee77',1), ('Employee78',3), ('Employee79',2), ('Employee80',5),
+('Employee81',0), ('Employee82',4), ('Employee83',1), ('Employee84',2), ('Employee85',3),
+('Employee86',5), ('Employee87',0), ('Employee88',4), ('Employee89',2), ('Employee90',1),
+('Employee91',3), ('Employee92',5), ('Employee93',0), ('Employee94',4), ('Employee95',2),
+('Employee96',1), ('Employee97',3), ('Employee98',5), ('Employee99',0), ('Employee100',4);
+
+SELECT COUNT(*) AS Total_Employees FROM employees;
